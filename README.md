@@ -1,6 +1,4 @@
 # Stock-Analysis-using-Map-Reduce-and-Hadoop
-Used Mapreduce on a Hadoop environment to compute the monthly volatility of about 3000 stocks with each having data of about three years .There were a total of 40000 files.
-
 
 ❖ I used 3 mapreduce stages in order to find the top 10 stocks with minimum volatility and top 10 stocks with maximum volatility.
 ❖ In the first stage the filename which is the stock name and date fields are extracted from the file that is being processed, the stock name/month/year is set as the key and the particular line of data is stored as a value.The reducer receives the input from the mapper with the values for every stock name and every month combined.The reducer then extracts the first and the last date for every month of and calculates the Xi value and sets it back with the key.The output of the first stage is (stock name/month/year,Xi value)
